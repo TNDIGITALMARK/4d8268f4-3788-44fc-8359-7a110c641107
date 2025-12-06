@@ -1,60 +1,61 @@
 @import "tailwindcss";
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Black Butterfly Transportation Design System
+   Professional appliance delivery service with clean, trustworthy aesthetics
+   All colors MUST be HSL.
 */
 
 :root {
-  /* Premium golf club color palette */
-  /* Off-white background with charcoal text */
-  --background: 40 20% 97%;
-  --foreground: 0 0% 15%;
+  /* Transportation & Logistics color palette */
+  /* Clean white background with dark navy text */
+  --background: 0 0% 100%;
+  --foreground: 215 25% 15%;
 
-  /* Clean white cards with charcoal text */
+  /* Clean white cards with navy text */
   --card: 0 0% 100%;
-  --card-foreground: 0 0% 15%;
+  --card-foreground: 215 25% 15%;
 
   /* Popovers with white background */
   --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 15%;
+  --popover-foreground: 215 25% 15%;
 
-  /* Primary: Deep forest green with white text */
-  --primary: 155 30% 25%;
+  /* Primary: Deep navy blue for trust and reliability */
+  --primary: 215 60% 20%;
   --primary-foreground: 0 0% 100%;
 
-  /* Secondary: Gold/champagne accent */
-  --secondary: 45 65% 60%;
-  --secondary-foreground: 0 0% 15%;
+  /* Secondary: Bright orange for call-to-action */
+  --secondary: 25 95% 53%;
+  --secondary-foreground: 0 0% 100%;
 
-  /* Muted: Light green-gray with darker text */
-  --muted: 155 15% 92%;
-  --muted-foreground: 0 0% 40%;
+  /* Muted: Light gray for subtle backgrounds */
+  --muted: 215 15% 95%;
+  --muted-foreground: 215 15% 40%;
 
-  /* Accent: Gold for highlights */
-  --accent: 45 75% 55%;
-  --accent-foreground: 0 0% 15%;
+  /* Accent: Bright orange for emphasis */
+  --accent: 25 95% 53%;
+  --accent-foreground: 0 0% 100%;
 
-  /* Destructive: Elegant red */
-  --destructive: 0 65% 48%;
+  /* Destructive: Professional red for alerts */
+  --destructive: 0 75% 45%;
   --destructive-foreground: 0 0% 100%;
 
-  /* Borders: Soft neutral */
-  --border: 0 0% 88%;
-  --input: 0 0% 88%;
-  --ring: 155 30% 25%;
+  /* Borders: Subtle gray */
+  --border: 215 15% 88%;
+  --input: 215 15% 88%;
+  --ring: 215 60% 20%;
 
-  /* Slightly more rounded for elegance */
+  /* Modern rounded corners */
   --radius: 0.5rem;
 
-  /* Sidebar: Clean white with black text */
+  /* Sidebar: White with navy accents */
   --sidebar-background: 0 0% 100%;
-  --sidebar-foreground: 0 0% 0%;
-  --sidebar-primary: 0 0% 0%;
+  --sidebar-foreground: 215 25% 15%;
+  --sidebar-primary: 215 60% 20%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 0 0% 96%;
-  --sidebar-accent-foreground: 0 0% 0%;
-  --sidebar-border: 0 0% 90%;
-  --sidebar-ring: 0 0% 0%;
+  --sidebar-accent: 215 15% 95%;
+  --sidebar-accent-foreground: 215 25% 15%;
+  --sidebar-border: 215 15% 88%;
+  --sidebar-ring: 215 60% 20%;
 }
 
 .dark {
@@ -178,25 +179,91 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Premium golf club typography */
+/* Professional transportation typography */
 .font-sans {
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
-.font-serif {
-  font-family: var(--font-playfair), ui-serif, Georgia, serif;
-}
-
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-playfair), ui-serif, Georgia, serif;
-  font-weight: 600;
-  letter-spacing: -0.025em;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: hsl(var(--foreground));
+  line-height: 1.2;
 }
 
-/* Clean button styles */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-size: 1.875rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.875rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+h6 {
+  font-size: 1.125rem;
+  margin-bottom: 0.625rem;
+}
+
+p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: hsl(var(--accent));
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Professional button styles */
 button {
-  font-weight: 500;
+  font-weight: 600;
+  border-radius: var(--radius);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+input, textarea, select {
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 0.5rem 0.75rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: hsl(var(--ring));
+  box-shadow: 0 0 0 3px hsla(var(--ring) / 0.1);
 }
 
 /* Subtle shadows for depth */
@@ -282,11 +349,56 @@ img {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* Premium gradient backgrounds */
-.gradient-gold {
-  background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--secondary)) 100%);
+/* Transportation gradient backgrounds */
+.gradient-navy {
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(215 70% 25%) 100%);
 }
 
-.gradient-green {
-  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(155 35% 30%) 100%);
+.gradient-orange {
+  background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(25 90% 58%) 100%);
+}
+
+/* Service area badge styles */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: calc(var(--radius) - 2px);
+  background: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+}
+
+/* CTA button styles */
+.btn-primary {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: hsl(215 70% 25%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+  background: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: hsl(25 90% 58%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }

@@ -22,8 +22,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sterling Oaks Golf Club | Championship Golf Experience",
-  description: "Experience championship golf on three award-winning courses designed by Robert Trent Jones II. Premium memberships, events, and world-class amenities.",
+  title: "Black Butterfly Transportation | Professional Appliance Delivery NYC",
+  description: "Professional appliance delivery service throughout NYC metro area. We deliver refrigerators, washers, dryers, and dishwashers from major retailers to your doorstep. Reliable, insured, and tracked.",
 };
 
 export default function RootLayout({
